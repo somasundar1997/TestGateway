@@ -1,0 +1,27 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5128
+                }
+            ],
+            "UpstreamPathTemplate": "/WeatherForecast",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "QoSOptions": {
+                "TimeoutValue": 60000,
+                "DurationOfBreak": 1000,
+                "ExceptionsAllowedBeforeBreaking": 0
+            }
+        }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "BaseUrl": "http://localhost:5162"
+    }
+}
